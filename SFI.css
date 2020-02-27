@@ -1,0 +1,117 @@
+.h_1 {
+  font-size: 60px;
+  background-color: darkred;
+  outline-style: solid;
+  outline-color: darkred;
+  outline-width: 5px;
+  padding: .25em;
+  font-family: fantasy;
+  color: lavenderblush;
+  font-style: italic;}
+
+  .hdetail {
+    font-size: 60px;
+    border-width: 0 ;
+    border-color:azure;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-style: solid;
+    padding: .30em;
+    font-family: fantasy;
+    color: lavenderblush;
+    font-style: italic;
+
+  }
+
+.ffname{
+  background-color: lavenderblush;
+  padding: 15px 30px 30px 40px;
+  outline-style: solid;
+  outline-color: darkred;
+  outline-width: 5px;
+}
+
+legend{
+  font-weight: bold;
+  font-size: 23px;
+  color: darkred;
+}
+
+label{
+  font-size: 110%;
+}
+
+.rounded{
+  border-radius: 100%;
+  border-style: solid;
+  border-color: darkred;
+  border-width: 5px;
+}
+
+.error{
+  color: red;
+  padding-top: 10px;
+}
+
+.card{
+  background-color:#360000;
+  border-style: solid;
+  border-color: azure;
+  border-width: 5px;
+  width: 70%;
+  margin: auto;
+  height: 70%;
+  
+  border-radius: 10px;
+}
+
+.legendd{
+  font-weight: bold;
+  font-size: 30px;
+  color: azure;
+}
+
+.dfont{
+  font-size: 15px;
+  padding-bottom: .40em ;
+  color: white;
+}
+
+.legenddt{
+  font-weight: bold;
+  font-size: 35px;
+  color: azure;
+  padding: .40em; 
+  margin: auto;
+  text-align: center;
+}
+
+
+h2{
+  color: darkred;font-size: 40px; 
+  font-weight: 750; 
+  text-align: center;
+}
+
+.otherbody{width: 70%; margin: auto;
+}
+
+.return1{ 
+  float: right; 
+  margin-bottom: 30px;
+}
+
+
+table{
+  margin: auto;
+}
+table, th, td {
+  padding: 10px;
+  border: 1px solid black; 
+  border-collapse: collapse;
+  width:1000px;
+
+}
+td{
+  text-align: center;
+}

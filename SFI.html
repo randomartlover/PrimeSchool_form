@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prime School: Student Form</title>
+  <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="SFI.css" media="screen">
+</head>
+
+<h1 class="h_1">Prime School</h1>
+
+<body class="otherbody">
+
+  <form name="fname" id="fname" method="POST" onsubmit="return sub()" action="list.html" target="_blank">
+    <br>
+    <div class="ffname">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h2>STUDENT FORM</h2>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <br>
+      <fieldset>
+        <legend>Personal information</legend>
+        <div class="container-fluid row  boom">
+
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <img id="img" class="rounded" height="280px" width="80%" >
+<br><br>
+<div class="row">
+              <label for="inp" id="uploadi" class="col-md-5" style="color: darkred;"> Upload Student image:</label>
+              <input id="inp" type='file' class="col-md-7" style="padding-left: 0;" onchange="document.getElementById('img').style.display='block';">
+              <div class="error" id="imgErr"></div>
+            </div>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label for="firstName"> First name:</label>
+              <input type="text" id="firstName" name="first" maxlength="15" class="form-control">
+              <div class="error" id="firstErr"></div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="middleName"> Middle name:</label>
+              <input type="text" id="middleName" name="middle" maxlength="15" class="form-control">
+              <div class="error" id="middleErr"></div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lastName"> Last name:
+              </label>
+              <input type="text" id="lastName" name="last" maxlength="15" class="form-control">
+              <div class="error" id="lastErr"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label for="mail">E-mail: </label> <input type="text" name="email" id="mail" class="form-control">
+              <div class="error" id="emailErr"></div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="age">Age:</label>
+              <select class="form-control" name="age" id="age" optional>
+                <option value="select" name="select">Select</option>
+                <option value="9" name="age">9</option>
+                <option value="11" name="age">11</option>
+                <option value="12" name="age">12</option>
+                <option value="13" name="age">13</option>
+                <option value="14" name="age">14</option>
+                <option value="15" name="age">15</option>
+                <option value="16" name="age">16</option>
+                <option value="17" name="age">17</option>
+                <option value="18" name="age">18</option>
+              </select>
+              <div class="error" id="ageErr"></div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label>Gender:</label>
+              <div class="form-row">
+                <div class="checkbox-inline">
+                  <input class="form-check-input" type="radio" name="gender" value="Female" id="female">
+                  <label for="female" class="form-check-label" id="f"> Female </label>
+                </div>
+
+                <div class="checkbox-inline">
+                  <input class="form-check-input" type="radio" name="gender" value="Male" id="male">
+                  <label class="form-check-label" for="male" id="m"> &nbsp Male </label>
+                </div>
+                <div class="error" id="genderErr"></div>
+
+              </div>
+            </div>
+          </div>
+      </fieldset>
+<br>
+      <fieldset>
+        <legend>Academic information</legend>
+        <div class="form-group">
+          <label>Subjects</label>
+
+          <div class="container-fluid" style="padding-left:0">
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                value=" Chemistry" id="chemistry">
+              <label for="chemistry" class="form-check-label">Chemistry </label></div>
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects" id="civic"
+                value="Civic Education">
+              <label for="civic" class="form-check-label"> Civic Education </label></div>
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                value="Home Economics" id="HomeE">
+              <label for="HomeE" class="form-check-label">Home Economics </label></div>
+          </div>
+
+          <div class="container-fluid" style="padding-left:0">
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                value="Mathematics" id="mathematics">
+              <label for="mathematics" class="form-check-label">Mathematics </label></div>
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                id="computer" value="Computer">
+              <label for="computer" class="form-check-label"> Computer </label></div>
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                id="geography" value="Geography">
+              <label for="geography" class="form-check-label">Geography</label></div>
+          </div>
+
+          <div class="container-fluid" style="padding-left:0">
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                value="Physics" id="physics">
+              <label for="physics" class="form-check-label">Physics</label></div>
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                id="biology" value="Biology">
+              <label for="biology" class="form-check-label"> Biology</label></div>
+            <div class="col-md-4 form-check"><input class="form-check-input" type="checkbox" name="subjects"
+                id="english" value="English Language">
+              <label for="english" class="form-check-label">English Language</label></div>
+          </div>
+          <div class="error" id="subjErr"></div>
+        </div>
+      </fieldset>
+      <br><br><br>
+      <fieldset>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="grade">Overall Grade:</label>
+            <select class="form-control" name="grade" id="grade" optional>
+              <option value="select">Select</option>
+              <option value="A1" name="grade">A1</option>
+              <option value="B2" name="grade">B2</option>
+              <option value="B3" name="grade">B3</option>
+              <option value="C4" name="grade">C4</option>
+              <option value="C5" name="grade">C5</option>
+              <option value="C6" name="grade">C6</option>
+              <option value="D7" name="grade">D7</option>
+              <option value="E8" name="grade">E8</option>
+              <option value="F9" name="grade">F9</option>
+            </select>
+            <div class="error" id="gradeErr"></div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="class">Class:</label>
+            <select class="form-control" name="class" id="class" optional>
+              <option value="select" name="select">Select</option>
+              <option value="JS1" name="class">JS1</option>
+              <option value="JS2" name="class">JS2</option>
+              <option value="JS3" name="class">JS3</option>
+              <option value="SS1" name="class">SS1</option>
+              <option value="SS2" name="class">SS2</option>
+              <option value="SS3" name="class">SS3</option>
+            </select>
+            <div class="error" id="classErr"></div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="ccomments" id="rem">Teacher's Remark: </label>
+            <input type=text class="form-control" name="comments" id="ccomments" maxlength="15"></input>
+            <div class="error" id="remErr"></div>
+          </div>
+      </fieldset>
+      <br>
+
+
+      <div class="button">
+        <input type="submit" value="Submit" id="subs" class="btn btn-danger btn-lg">
+        <input type="reset" value="Reset Values" class="btn btn-danger btn-lg">
+      </div>
+    </div>
+    <br>
+
+
+
+    
+
+    </div>
+  </form>
+  <button class="btn btn-danger return1" onclick="location.href='list.html';" type="button">Return to Form List</button>
+
+  <script>
+    window.b64 = false;
+    firstErr = middleErr = lastErr = ageErr = genderErr = emailErr = subjErr = gradeErr = classErr = remErr = imgErr = true;
+
+    //displays selected picture and saves to var b64
+    function readFile() {
+      var x = this.files;
+
+      if (typeof (x[0]) == "undefined") {
+        printError("imgErr", "Please upload an image!");
+        document.getElementById("img").style.display = "none";
+        window.b64 = false;
+        return;
+      }
+
+      else if (x[0].size > 1048576) // 1 mb for bytes.
+      {
+        printError("imgErr", "File size must be under 1mb!");
+        document.getElementById("img").src = "";
+        
+        window.b64 = false;
+
+        return;
+      }
+      else {
+        printError("imgErr", "");
+        window.b64 = true;
+        if (x && x[0]) {
+
+          var FR = new FileReader();
+
+          FR.addEventListener("load", function (e) {
+            document.getElementById("img").src = e.target.result;
+            
+            window.b64 = e.target.result;
+          });
+
+          FR.readAsDataURL(this.files[0]);
+        }
+      }
+
+    }
+
+    document.getElementById("inp").addEventListener("change", readFile);
+
+
+    function printError(elemId, hintMsg) {
+      document.getElementById(elemId).innerHTML = hintMsg;
+    }
+
+
+    function jsUcfirst(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function first() {
+      firstErr = true;
+      firstname = document.fname.first.value;
+      if (firstname == "") {
+        printError("firstErr", "Please enter your first name!");
+      }
+      else if ((firstname.trim() == "") || (/^[a-zA-Z\s]+$/.test(firstname) === false)) {
+        printError("firstErr", "Please enter a valid name!");
+      }
+      else {
+        printError("firstErr", "");
+        firstErr = false;
+      }
+      return firstErr
+    }
+
+
+    function middle() {
+      middleErr = true
+      middlename = document.fname.middle.value;
+      if (middlename == "") {
+        printError("middleErr", "Please enter your middle name!");
+      }
+      else if ((middlename.trim() == "") || (/^[a-zA-Z\s]+$/.test(middlename) === false)) {
+        printError("middleErr", "Please enter a valid name!");
+      }
+      else {
+        printError("middleErr", "");
+        middleErr = false;
+      }
+      return middleErr;
+    }
+
+
+    function last() {
+      lastErr = true;
+      lastname = document.fname.last.value;
+      if (lastname == "") {
+        printError("lastErr", "Please enter your last name!")
+      }
+      else if ((lastname.trim() == "") || (/^[a-zA-Z\s]+$/.test(lastname) === false)) {
+        printError("lastErr", "Please enter a valid name!")
+      }
+      else {
+        printError("lastErr", "");
+        lastErr = false;
+      }
+      return lastErr
+    }
+
+
+    function rremark() {
+      remErr = true;
+      remark = document.fname.comments.value;
+      if (remark.trim() == "") {
+        printError("remErr", "Please add a remark!");
+      }
+      else {
+        printError("remErr", "");
+        remErr = false;
+      }
+      return remErr
+    }
+
+
+    function eemail() {
+      email = document.fname.email.value;
+      emailErr = true;
+      var emailval = JSON.parse(localStorage.getItem("form"));
+
+
+      if (window.localStorage.length !== 0) {
+        const emailar = emailval.map(item => item.email);
+        if (emailar.includes(email) == true) {
+          printError("emailErr", "Email address already in use!");
+          emailErr = true;
+          return emailErr;
+        }
+
+        else { return clool() }
+      }
+      else { return clool() }
+    }
+
+    function clool() {
+      if (email == "") {
+        printError("emailErr", "Please enter your email address!");
+        emailErr = true;
+      }
+
+      else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+
+        if (regex.test(email) === false) {
+          printError("emailErr", "Please enter a valid email address!");
+          emailErr = true;
+        }
+
+        else {
+          printError("emailErr", "");
+          emailErr = false;
+        }
+      }
+
+      return emailErr
+    }
+
+    //validate first name on change
+    document.fname.first.addEventListener("change", first)
+
+    //validate middle name on change
+    document.fname.middle.addEventListener("change", middle);
+
+    //validate last name on change
+    document.fname.last.addEventListener("change", last);
+
+    //validate remark on change
+    document.fname.comments.addEventListener("change", rremark);
+
+    //validate email on change
+    document.fname.email.addEventListener("change", eemail)
+
+
+    formValues = [];
+    function sub() {
+      var subjects = [];
+      var obj = {};
+
+      firstErr = middleErr = lastErr = ageErr = genderErr = emailErr = subjErr = gradeErr = classErr = remErr = imgErr = true;
+      var subjectsInput = document.fname.subjects;
+      for (var s = 0; s < subjectsInput.length; s++) {
+        if (subjectsInput[s].checked) { subjects.push(subjectsInput[s].value) }
+      }
+
+
+      firstErr = first();
+      middleErr = middle();
+      lastErr = last();
+      emailErr = eemail();
+      remErr = rremark();
+
+
+      //validate gender
+      if (document.fname.gender.value == "") {
+        printError("genderErr", "Please select a gender!");
+      }
+      else {
+        printError("genderErr", "");
+        genderErr = false;
+      }
+
+      //validate class
+      if (document.fname.class.value == "select") {
+        printError("classErr", "Please select a class!");
+      }
+      else {
+        printError("classErr", "");
+        classErr = false;
+      }
+
+
+      //validate img
+      if ((window.b64 == false)) {
+        printError("imgErr", "Please upload an image!");
+      }
+
+      else {
+        printError("imgErr", "");
+        imgErr = false;
+      }
+
+
+      //validate grade
+      if (document.fname.grade.value == "select") {
+        printError("gradeErr", "Please select a grade!");
+      }
+      else {
+        printError("gradeErr", "");
+        gradeErr = false;
+      }
+
+      //validate age
+      if (document.fname.age.value == "select") {
+        printError("ageErr", "Please select an age!");
+      }
+      else {
+        printError("ageErr", "");
+        ageErr = false;
+      }
+
+
+      //validate subject
+      if (subjects == "") {
+        printError("subjErr", "Please choose one or more subjects!");
+      }
+      else {
+        printError("subjErr", "");
+        subjErr = false;
+      }
+
+      //Prevent form submission if error is present
+      if ((genderErr || classErr || ageErr || firstErr || middleErr || lastErr || subjErr || gradeErr || emailErr || remErr || imgErr) == true) {
+        return false;
+      }
+      else {
+
+        obj.gender = document.fname.gender.value;
+        obj.class = document.fname.class.value;
+        obj.grade = document.fname.grade.value;
+        obj.age = document.fname.age.value;
+        obj.firstname = jsUcfirst(document.fname.first.value);
+        obj.middlename = jsUcfirst(document.fname.middle.value);
+        obj.lastname = jsUcfirst(document.fname.last.value);
+        obj.subjects = subjects;
+        obj.remark = document.fname.comments.value;
+        obj.email = document.fname.email.value;
+        obj.id = generateUniqueId();
+        obj.img = window.b64;
+
+        formValues.push(obj);
+        localStorage.setItem('form', JSON.stringify(formValues));
+        firstErr = middleErr = lastErr = ageErr = genderErr = emailErr = subjErr = gradeErr = classErr = remErr = imgErr = true;
+        document.getElementById("fname").reset();
+        window.b64 = false;
+        document.getElementById("img").src = "";
+      }
+    }
+
+    function generateUniqueId() {
+      return (Date.now() + Math.random()).toString();
+
+    }
+  </script>
+
+</body>
+
+</html>
